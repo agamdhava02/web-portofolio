@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Agam</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 1.5em;
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 4em 2em;
+      min-height: 100vh;
+    }
+
+    #home {
+      background: #ecf0f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 3em;
+    }
+
+    #tentang, #proyek, #kontak {
+      background: #fff;
+      margin-top: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      margin-top: 1em;
+      background: #f0f0f0;
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #2c3e50;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      #home h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Agam</strong> Portofolio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Halo, Saya Agam</h1>
+    <p>Web Developer | UI Designer | Freelancer</p>
+  </section>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang pengembang web dengan pengalaman dalam membangun website modern dan responsif menggunakan HTML, CSS, dan JavaScript.</p>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek Saya</h2>
+    <div class="card">
+      <h3>Website Toko Online</h3>
+      <p>Sebuah platform e-commerce untuk penjualan produk UMKM lokal.</p>
+    </div>
+    <div class="card">
+      <h3>Aplikasi To-Do List</h3>
+      <p>Aplikasi sederhana untuk mengatur tugas harian berbasis web.</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Email: agam@example.com</p>
+    <p>Instagram: @agamdhava</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Agam Dhava. All rights reserved.
+  </footer>
+
+</body>
+</html>
