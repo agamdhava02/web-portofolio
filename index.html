@@ -1,132 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Agam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Saya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 1em 2em;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      margin-left: 1.5em;
-      color: white;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 4em 2em;
-      min-height: 100vh;
-    }
-
-    #home {
-      background: #ecf0f1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    #home h1 {
-      font-size: 3em;
-    }
-
-    #tentang, #proyek, #kontak {
-      background: #fff;
-      margin-top: 2em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .card {
-      margin-top: 1em;
-      background: #f0f0f0;
-      padding: 1em;
-      border-radius: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1em;
-      background: #2c3e50;
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      #home h1 {
-        font-size: 2em;
-      }
-
-      nav {
-        flex-direction: column;
-      }
-    }
+    * {margin:0; padding:0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background:#f9f9f9; color:#333; line-height:1.6;}
+    header {background:#4CAF50; color:#fff; padding:20px; text-align:center; position:sticky; top:0; z-index:1000;}
+    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:500;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:60px 20px; max-width:1100px; margin:auto;}
+    h1,h2 {margin-bottom:20px;}
+    .hero {display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 20px;}
+    .hero img {width:150px; border-radius:50%; margin-bottom:20px;}
+    .skills,.projects,.pkl {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+    footer {text-align:center; padding:20px; background:#222; color:#fff;}
+    button {padding:10px 20px; border:none; border-radius:8px; cursor:pointer;}
+    .dark-mode {background:#121212; color:#f1f1f1;}
+    .dark-mode header {background:#333;}
+    .dark-mode footer {background:#111;}
   </style>
 </head>
 <body>
-
   <header>
-    <div><strong>Agam</strong> Portofolio</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
+  <h1>Portfolio Saya</h1>
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Skill</a>
+    <a href="#projects">Proyek</a>
+    <a href="#pkl">PKL</a>
+    <a href="#contact">Kontak</a>
+    <!-- Tambahan Download CV -->
+    <a href="cv agam.pdf" download target="_blank">Download CV</a>
+  </nav>
+  <button onclick="toggleDarkMode()">🌙/🌞</button>
+</header>
 
-  <section id="home">
-    <h1>Halo, Saya Agam</h1>
-    <p>Web Developer | UI Designer | Freelancer</p>
+  <section class="hero">
+    <img src="ft agam.jpg" alt="Foto Profil">
+    <h2>Halo, saya Agam!</h2>
+    <p>Seorang web developer yang suka membangun website modern dan responsif.</p>
   </section>
 
-  <section id="tentang">
+  <section id="about">
     <h2>Tentang Saya</h2>
-    <p>Saya adalah seorang pengembang web dengan pengalaman dalam membangun website modern dan responsif menggunakan HTML, CSS, dan JavaScript.</p>
+    <p>Saya memiliki pengalaman dalam membuat website menggunakan HTML, CSS, dan JavaScript. Tujuan saya adalah membantu orang dan bisnis memiliki kehadiran online yang menarik.</p>
   </section>
 
-  <section id="proyek">
-    <h2>Proyek Saya</h2>
-    <div class="card">
-      <h3>Website Toko Online</h3>
-      <p>Sebuah platform e-commerce untuk penjualan produk UMKM lokal.</p>
-    </div>
-    <div class="card">
-      <h3>Aplikasi To-Do List</h3>
-      <p>Aplikasi sederhana untuk mengatur tugas harian berbasis web.</p>
+  <section id="skills">
+    <h2>Skill</h2>
+    <div class="skills">
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">React</div>
+      <div class="card">UI/UX Design</div>
     </div>
   </section>
 
-  <section id="kontak">
+  <section id="projects">
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Portfolio</h3>
+        <p>Website portfolio responsif untuk menampilkan proyek dan pengalaman kerja.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Pengalaman PKL -->
+  <section id="pkl">
+    <h2>Pengalaman PKL</h2>
+    <div class="pkl">
+      <div class="card">
+        <h3>PKL di UP Museum Kebaharian JKT</h3>
+        <p>Mendokumentasikan Acara, Membuat Poster Menggunakan Canva.</p>
+        <p><strong>Durasi:</strong> November 2024 – April 2025</p>
+      </div>
+  </section>
+
+  <section id="contact">
     <h2>Kontak</h2>
-    <p>Email: agam@example.com</p>
-    <p>Instagram: @agamdhava</p>
+    <p>Email: <a href="mailto:agamdhava@mail.com">agamdhava@mail.com</a></p>
+    <p>Instagram <a href="https://Instagram.com/agam_dhava" target="_blank">Agam</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Agam Dhava. All rights reserved.
+    <p>&copy; 2025 Portfolio Saya. Semua Hak Dilindungi.</p>
   </footer>
 
+  <script>
+    function toggleDarkMode(){
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
